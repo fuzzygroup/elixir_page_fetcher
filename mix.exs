@@ -14,9 +14,14 @@ defmodule PageFetcher.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger],
+    [applications: [:logger, :httpoison],
      mod: {PageFetcher, []}]
   end
+  
+  # def application do
+  #   [applications: [:httpoison]]
+  # end
+  
 
   # Dependencies can be Hex packages:
   #
@@ -28,6 +33,8 @@ defmodule PageFetcher.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:exredis, ">= 0.2.4"}]
+    [{:exredis, ">= 0.2.4"},
+     {:httpoison, "~> 0.9.0"}
+    ]
   end
 end

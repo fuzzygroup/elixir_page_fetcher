@@ -1,6 +1,18 @@
 defmodule PageFetcher do
   use Application
 
+  # get redis 
+  # pop off redis
+  # tokenize the bits from redis into variables
+  # fetch the page
+  # save the page
+  
+  
+  def fetch_pages() do
+    IO.puts("The fetch_pages/0 routine has just been called at #{:os.system_time(:milli_seconds)}")
+    fetch_pages()
+  end
+
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
   # for more information on OTP Applications
   def start(_type, _args) do
